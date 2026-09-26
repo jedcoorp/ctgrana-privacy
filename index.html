@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Termos de Uso e Política de Privacidade do CtGrana — app de organização financeira local-first."
+    />
+    <title>CtGrana — Termos de Uso e Privacidade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f3f7f2;
+        --bg-deep: #e4efe3;
+        --surface: #ffffff;
+        --ink: #0f1a12;
+        --muted: #5a6b5e;
+        --primary: #006b2c;
+        --primary-soft: #0be668;
+        --primary-container: #8bdb85;
+        --outline: #c5d4c6;
+        --radius: 16px;
+        --shadow: 0 12px 40px rgba(15, 26, 18, 0.08);
+        --max: 760px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Space Grotesk", system-ui, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(1200px 500px at 10% -10%, rgba(11, 230, 104, 0.18), transparent 55%),
+          radial-gradient(900px 420px at 100% 0%, rgba(0, 107, 44, 0.12), transparent 50%),
+          linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
+        line-height: 1.55;
+      }
+
+      a {
+        color: var(--primary);
+      }
+
+      .shell {
+        width: min(100% - 2rem, var(--max));
+        margin: 0 auto;
+        padding: 2.5rem 0 4rem;
+      }
+
+      .topbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.75rem;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .mark {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(145deg, var(--primary-soft), var(--primary));
+        color: #04140a;
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-weight: 800;
+        font-size: 1.05rem;
+        box-shadow: 0 8px 20px rgba(0, 107, 44, 0.25);
+      }
+
+      .brand-copy strong {
+        display: block;
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+
+      .brand-copy span {
+        display: block;
+        font-size: 0.8rem;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .lang {
+        display: inline-flex;
+        padding: 0.25rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid var(--outline);
+        gap: 0.15rem;
+      }
+
+      .lang button {
+        border: 0;
+        background: transparent;
+        color: var(--muted);
+        font: inherit;
+        font-weight: 700;
+        font-size: 0.8rem;
+        padding: 0.45rem 0.85rem;
+        border-radius: 999px;
+        cursor: pointer;
+      }
+
+      .lang button[aria-pressed="true"] {
+        background: var(--primary);
+        color: #fff;
+      }
+
+      .hero {
+        background: var(--surface);
+        border: 1px solid var(--outline);
+        border-radius: calc(var(--radius) + 4px);
+        box-shadow: var(--shadow);
+        padding: 1.75rem 1.5rem 1.5rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        margin: 0 0 0.75rem;
+        color: var(--muted);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--primary-soft);
+        box-shadow: 0 0 0 4px rgba(11, 230, 104, 0.2);
+      }
+
+      h1 {
+        margin: 0 0 0.75rem;
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-size: clamp(1.7rem, 4vw, 2.35rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        line-height: 1.15;
+      }
+
+      .lede {
+        margin: 0;
+        color: var(--muted);
+        max-width: 52ch;
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-top: 1.25rem;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.4rem 0.75rem;
+        border-radius: 999px;
+        background: rgba(0, 107, 44, 0.08);
+        color: var(--primary);
+        font-size: 0.8rem;
+        font-weight: 700;
+        border: 1px solid rgba(0, 107, 44, 0.15);
+      }
+
+      .toc {
+        background: rgba(255, 255, 255, 0.65);
+        border: 1px solid var(--outline);
+        border-radius: var(--radius);
+        padding: 1rem 1.15rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .toc h2 {
+        margin: 0 0 0.65rem;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+      }
+
+      .toc ol {
+        margin: 0;
+        padding-left: 1.15rem;
+        columns: 1;
+        gap: 1.5rem;
+      }
+
+      @media (min-width: 640px) {
+        .toc ol {
+          columns: 2;
+        }
+      }
+
+      .toc a {
+        color: var(--ink);
+        text-decoration: none;
+        font-size: 0.92rem;
+      }
+
+      .toc a:hover {
+        color: var(--primary);
+        text-decoration: underline;
+      }
+
+      .toc li {
+        break-inside: avoid;
+        margin: 0.25rem 0;
+      }
+
+      article {
+        background: var(--surface);
+        border: 1px solid var(--outline);
+        border-radius: calc(var(--radius) + 4px);
+        box-shadow: var(--shadow);
+        padding: 0.5rem 0;
+      }
+
+      section {
+        padding: 1.35rem 1.5rem;
+        border-bottom: 1px solid var(--outline);
+      }
+
+      section:last-child {
+        border-bottom: 0;
+      }
+
+      section h2 {
+        margin: 0 0 0.75rem;
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-size: 1.15rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: var(--primary);
+      }
+
+      section p {
+        margin: 0 0 0.75rem;
+        color: #243028;
+      }
+
+      section p:last-child {
+        margin-bottom: 0;
+      }
+
+      footer {
+        margin-top: 1.75rem;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      footer a {
+        font-weight: 700;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="#top" id="top">
+          <div class="mark" aria-hidden="true">Ct</div>
+          <div class="brand-copy">
+            <strong>CtGrana</strong>
+            <span data-i18n="brandTag">Local-first · Sem conta</span>
+          </div>
+        </a>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" id="btn-pt" aria-pressed="true">PT</button>
+          <button type="button" id="btn-en" aria-pressed="false">EN</button>
+        </div>
+      </header>
+
+      <div class="hero">
+        <p class="eyebrow" data-i18n="eyebrow">Documento legal</p>
+        <h1 data-i18n="title">Termos de Uso e Privacidade</h1>
+        <p class="lede" data-i18n="lede">
+          Versão alinhada ao app atual: dados financeiros no aparelho, sem conta CtGrana, e anúncios via Google AdMob.
+        </p>
+        <div class="meta">
+          <span class="chip" data-i18n="chipDate">Vigência: 26 de setembro de 2026</span>
+          <span class="chip">
+            <span data-i18n="chipContactLabel">Contato:</span>
+            <a href="mailto:privacidade@ctgrana.app">privacidade@ctgrana.app</a>
+          </span>
+        </div>
+      </div>
+
+      <nav class="toc" aria-label="Sumário">
+        <h2 data-i18n="tocTitle">Sumário</h2>
+        <ol id="toc-list"></ol>
+      </nav>
+
+      <article id="content"></article>
+
+      <footer>
+        <p>
+          © <span id="year"></span> CtGrana ·
+          <a href="mailto:privacidade@ctgrana.app">privacidade@ctgrana.app</a>
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      const CONTACT = "privacidade@ctgrana.app";
+
+      const COPY = {
+        "pt-BR": {
+          brandTag: "Local-first · Sem conta",
+          eyebrow: "Documento legal",
+          title: "Termos de Uso e Privacidade",
+          lede:
+            "Versão alinhada ao app atual: dados financeiros no aparelho, sem conta CtGrana, e anúncios via Google AdMob.",
+          chipDate: "Vigência: 26 de setembro de 2026",
+          chipContactLabel: "Contato:",
+          tocTitle: "Sumário",
+          sections: [
+            {
+              title: "1. Introdução",
+              paragraphs: [
+                "Estes Termos de Uso e Política de Privacidade (“Termos”) regem o uso do aplicativo CtGrana (“App”, “nós” ou “CtGrana”). Ao instalar ou utilizar o App, você concorda com estes Termos.",
+                "Vigência: a partir de 26 de setembro de 2026.",
+                "A versão vigente também pode ser publicada em página web externa do CtGrana, para consulta fora do App (por exemplo, listagens em lojas de aplicativos).",
+                "Dúvidas sobre estes Termos ou sobre privacidade: " + CONTACT + ".",
+              ],
+            },
+            {
+              title: "2. O que é o CtGrana",
+              paragraphs: [
+                "O CtGrana é um aplicativo de organização financeira pessoal, offline e local-first. Ele permite registrar lançamentos, categorias, orçamentos e recorrências no seu próprio aparelho.",
+                "Não exigimos cadastro, login, e-mail nem conta na nuvem. O App foi projetado para manter seus lançamentos financeiros no dispositivo, sem enviá-los a servidores do CtGrana.",
+              ],
+            },
+            {
+              title: "3. Elegibilidade e uso aceitável",
+              paragraphs: [
+                "Você deve usar o App apenas para fins pessoais e lícitos, em conformidade com a legislação aplicável.",
+                "É vedado usar o App de forma a prejudicar o dispositivo, outros usuários ou terceiros, ou para práticas ilegais. Engenharia reversa com finalidade maliciosa, exploração de falhas ou uso que viole direitos de terceiros não é permitido.",
+              ],
+            },
+            {
+              title: "4. Sem conta de usuário",
+              paragraphs: [
+                "O CtGrana não cria conta online. Na primeira abertura, o App gera localmente um identificador técnico aleatório (install_id) apenas neste dispositivo, para organizar dados internos (por exemplo, categorias personalizadas).",
+                "Esse identificador não é um login, não permite recuperação em outro aparelho e não é enviado a servidores do CtGrana.",
+              ],
+            },
+            {
+              title: "5. Funcionalidades atuais",
+              paragraphs: [
+                "Na versão atual, o App permite, entre outras funções: registrar receitas e despesas; gerenciar categorias; definir orçamentos (tetos) mensais por categoria; configurar lançamentos recorrentes; visualizar resumos, gráficos e conquistas gerados localmente; compartilhar texto de relatório via folha de compartilhamento do sistema operacional (quando você escolhe essa ação); ajustar aparência (tema), idioma e moeda de exibição; e exibir anúncios por meio do Google AdMob.",
+                "Recursos futuros (por exemplo, sincronização em nuvem, exportação avançada ou planos pagos), se existirem, só entrarão em vigor após atualização destes Termos e, quando aplicável, consentimento ou opção explícita do usuário.",
+              ],
+            },
+            {
+              title: "6. Natureza do serviço e isenções",
+              paragraphs: [
+                "O CtGrana é uma ferramenta informativa de organização pessoal. Não é instituição financeira, banco, corretora, administradora de cartões nem consultoria ou assessoria financeira, contábil ou jurídica.",
+                "Você é o único responsável pela veracidade dos lançamentos que registra e pelas decisões financeiras que tomar com base nas informações exibidas no App.",
+              ],
+            },
+            {
+              title: "7. Dados tratados (Privacidade / LGPD)",
+              paragraphs: [
+                "Em relação aos seus registros financeiros, o CtGrana trata esses dados no seu dispositivo. Em geral:",
+                "(a) Dados financeiros que você inserir: tipo (receita/despesa), valor, categoria, descrição, data, regras de recorrência e orçamentos mensais.",
+                "(b) Preferências de uso: tema (claro/escuro/sistema), idioma da interface e moeda de exibição.",
+                "(c) Identificador técnico local: install_id e metadados de instalação/onboarding armazenados no banco local.",
+                "(d) Dados relacionados a publicidade: o SDK do Google AdMob pode processar identificadores de publicidade do dispositivo, informações técnicas do aparelho e sinais necessários à veiculação, medição e combate a fraude de anúncios, conforme as políticas do Google. O CtGrana não envia o conteúdo do seu extrato financeiro (lançamentos, valores, categorias, descrições) aos servidores do CtGrana nem os inclui de propósito nas requisições de anúncio.",
+                "Não coletamos nome civil, e-mail, telefone, documentos, localização GPS, contatos da agenda, fotos nem dados de pagamento para uma conta CtGrana, porque não há cadastro nem pagamentos in-app no App hoje.",
+                "Bases legais (Lei nº 13.709/2018 — LGPD), na medida aplicável: execução das funcionalidades solicitadas por você (organização financeira local); e, para publicidade, legítimo interesse e/ou outras bases cabíveis à veiculação de anúncios, observadas as regras das lojas e, quando exigido, mecanismos de consentimento ou opções do sistema operacional (por exemplo, limitações de rastreamento / ATT em iOS).",
+              ],
+            },
+            {
+              title: "8. Finalidade e armazenamento",
+              paragraphs: [
+                "Finalidade principal: permitir que você organize e visualize suas finanças pessoais no aparelho.",
+                "Finalidade de publicidade: financiar o App na versão gratuita por meio de anúncios exibidos na interface.",
+                "Armazenamento local: banco SQLite (arquivo do App no dispositivo) para dados financeiros e preferências técnicas; armazenamento local do sistema (AsyncStorage) para tema e idioma.",
+                "O CtGrana, na versão atual, não opera servidores próprios que recebam, armazenem ou processem seus lançamentos financeiros. Dados de publicidade podem ser tratados pelo Google (AdMob) fora do aparelho, nos termos das políticas do Google.",
+              ],
+            },
+            {
+              title: "9. Compartilhamento e terceiros",
+              paragraphs: [
+                "O CtGrana não vende seus dados financeiros.",
+                "Publicidade — Google AdMob: utilizamos o SDK react-native-google-mobile-ads / Google Mobile Ads para exibir anúncios (por exemplo, banners e intersticiais). O Google pode receber dados técnicos e identificadores de anúncio necessários à operação da rede. Consulte também a Política de Privacidade do Google / AdMob. O CtGrana não transmite seu livro-caixa (extrato) a anunciantes.",
+                "Compartilhamento iniciado por você: se você usar “compartilhar relatório” ou recurso similar, o conteúdo que você escolher enviar sai do App pela folha de compartilhamento do sistema (apps e destinos que você selecionar).",
+                "Outras ressalvas fora do controle direto do App: (i) backups do sistema operacional (por exemplo, iCloud ou Google Backup) podem copiar dados do App para a nuvem do fabricante ou da conta da loja; (ii) quem tiver acesso físico ou desbloqueado ao aparelho poderá ver os dados no App; (iii) se no futuro houver recurso opt-in (como sync em nuvem), o compartilhamento correspondente será descrito nestes Termos antes de ser ativado.",
+              ],
+            },
+            {
+              title: "10. Segurança",
+              paragraphs: [
+                "O App não implementa criptografia adicional própria do banco de dados (por exemplo, vault criptografado pelo CtGrana). A proteção depende das medidas do sistema operacional e do seu aparelho (bloqueio de tela, biometria do SO, criptografia de disco do fabricante, quando disponíveis).",
+                "Recomendamos: manter o aparelho bloqueado, não compartilhar o desbloqueio com terceiros e revisar as opções de backup do sistema se não desejar cópias off-device dos dados do App.",
+              ],
+            },
+            {
+              title: "11. Retenção e exclusão",
+              paragraphs: [
+                "Os dados financeiros e preferências permanecem no aparelho enquanto o App estiver instalado e você não os apagar.",
+                "Você pode excluir lançamentos, categorias (quando permitido), orçamentos e recorrências pelas próprias telas do App. A desinstalação do App remove, em regra, os dados locais armazenados pelo CtGrana neste dispositivo.",
+                "Como o CtGrana não mantém cópia financeira em servidores próprios, não há “exclusão na nuvem do CtGrana” a solicitar para o extrato — a exclusão ocorre no dispositivo (e, se aplicável, nos backups do sistema operacional). Dados tratados pelo Google AdMob seguem as políticas e prazos do Google.",
+              ],
+            },
+            {
+              title: "12. Direitos do titular (LGPD)",
+              paragraphs: [
+                "Na medida aplicável, você pode: acessar e corrigir os dados que registrou no App; excluir dados pelo próprio App ou desinstalando-o; e obter informações sobre o tratamento descrito nestes Termos.",
+                "Como o tratamento financeiro é local, o exercício prático desses direitos sobre o extrato ocorre no dispositivo. Para dúvidas gerais: " +
+                  CONTACT +
+                  ". Para opções relacionadas a anúncios e identificadores de publicidade, use também as configurações de privacidade do seu sistema operacional e as ferramentas disponibilizadas pelo Google.",
+              ],
+            },
+            {
+              title: "13. Crianças e adolescentes",
+              paragraphs: [
+                "O App não é destinado a crianças sem supervisão de um responsável. Se você for responsável legal por um menor, supervisiona o uso, os dados financeiros eventualmente registrados e a exposição a anúncios.",
+              ],
+            },
+            {
+              title: "14. Alterações destes Termos",
+              paragraphs: [
+                "Podemos atualizar estes Termos para refletir mudanças no App, na legislação ou em práticas de privacidade. A versão vigente estará disponível no App (Ajustes) e, quando publicada, na página web externa do CtGrana.",
+                "O uso continuado após a publicação de alterações, quando razoavelmente notificadas in-app ou na página web, constitui aceitação da versão atualizada, salvo quando a lei exigir consentimento adicional.",
+              ],
+            },
+            {
+              title: "15. Limitação de responsabilidade",
+              paragraphs: [
+                "Na máxima extensão permitida pela lei aplicável, o CtGrana não se responsabiliza por: perda de dados decorrente de desinstalação, falha de hardware, reset do aparelho, backups incompletos ou configurações do sistema operacional; decisões financeiras tomadas com base no App; interrupções causadas por atualizações do SO ou limitações do dispositivo; ou disponibilidade, conteúdo ou conduta de anúncios de terceiros veiculados via AdMob.",
+                "O App é fornecido “como está”, dentro dos limites legais. Nada nestes Termos exclui direitos do consumidor que não possam ser afastados por contrato.",
+              ],
+            },
+            {
+              title: "16. Lei aplicável",
+              paragraphs: [
+                "Estes Termos são regidos pelas leis da República Federativa do Brasil, incluindo a LGPD, sem prejuízo de normas de proteção ao consumidor aplicáveis.",
+              ],
+            },
+            {
+              title: "17. Contato",
+              paragraphs: [
+                "Operador do produto (identificação nestes Termos): CtGrana.",
+                "Privacidade e termos: " + CONTACT + ".",
+              ],
+            },
+          ],
+        },
+        en: {
+          brandTag: "Local-first · No account",
+          eyebrow: "Legal document",
+          title: "Terms of Use and Privacy",
+          lede:
+            "Version aligned with the current app: financial data on-device, no CtGrana account, and ads via Google AdMob.",
+          chipDate: "Effective: September 26, 2026",
+          chipContactLabel: "Contact:",
+          tocTitle: "Contents",
+          sections: [
+            {
+              title: "1. Introduction",
+              paragraphs: [
+                "These Terms of Use and Privacy Policy (“Terms”) govern your use of the CtGrana application (“App”, “we”, or “CtGrana”). By installing or using the App, you agree to these Terms.",
+                "Effective date: September 26, 2026.",
+                "The current version may also be published on an external CtGrana web page for viewing outside the App (for example, app-store listings).",
+                "Questions about these Terms or privacy: " + CONTACT + ".",
+              ],
+            },
+            {
+              title: "2. What CtGrana is",
+              paragraphs: [
+                "CtGrana is a personal finance organization app that is offline and local-first. It lets you record transactions, categories, budgets, and recurrences on your own device.",
+                "We do not require sign-up, login, email, or a cloud account. The App is designed to keep your financial ledger on the device and not send it to CtGrana servers.",
+              ],
+            },
+            {
+              title: "3. Eligibility and acceptable use",
+              paragraphs: [
+                "You must use the App only for personal and lawful purposes, in compliance with applicable law.",
+                "You may not use the App to harm the device, other users, or third parties, or for illegal practices. Malicious reverse engineering, exploitation of vulnerabilities, or use that violates third-party rights is not allowed.",
+              ],
+            },
+            {
+              title: "4. No user account",
+              paragraphs: [
+                "CtGrana does not create an online account. On first launch, the App generates a random technical identifier (install_id) locally on this device only, to organize internal data (for example, custom categories).",
+                "That identifier is not a login, does not enable recovery on another device, and is not sent to CtGrana servers.",
+              ],
+            },
+            {
+              title: "5. Current features",
+              paragraphs: [
+                "In the current version, the App lets you, among other things: record income and expenses; manage categories; set monthly budget caps per category; configure recurring entries; view summaries, charts, and achievements generated locally; share report text via the operating-system share sheet (when you choose that action); adjust appearance (theme), language, and display currency; and show ads through Google AdMob.",
+                "Future features (for example, cloud sync, advanced export, or paid plans), if any, will only take effect after these Terms are updated and, where applicable, after your explicit consent or opt-in.",
+              ],
+            },
+            {
+              title: "6. Nature of the service and disclaimers",
+              paragraphs: [
+                "CtGrana is an informational personal organization tool. It is not a financial institution, bank, broker, card issuer, or financial, accounting, or legal advisory service.",
+                "You alone are responsible for the accuracy of the entries you record and for any financial decisions you make based on information shown in the App.",
+              ],
+            },
+            {
+              title: "7. Data we process (Privacy / LGPD)",
+              paragraphs: [
+                "Regarding your financial records, CtGrana processes that data on your device. In general:",
+                "(a) Financial data you enter: type (income/expense), amount, category, description, date, recurrence rules, and monthly budgets.",
+                "(b) Usage preferences: theme (light/dark/system), interface language, and display currency.",
+                "(c) Local technical identifier: install_id and installation/onboarding metadata stored in the local database.",
+                "(d) Advertising-related data: the Google AdMob SDK may process device advertising identifiers, technical device information, and signals needed to serve, measure, and prevent fraud in ads, under Google’s policies. CtGrana does not send your financial ledger contents (transactions, amounts, categories, descriptions) to CtGrana servers, nor does it intentionally include them in ad requests.",
+                "We do not collect legal name, email, phone, government IDs, GPS location, address-book contacts, photos, or payment details for a CtGrana account, because there is no account or in-app payment today.",
+                "Legal bases under Brazilian Law No. 13,709/2018 (LGPD), to the extent applicable: performance of features you request (local financial organization); and, for advertising, legitimate interest and/or other bases applicable to serving ads, subject to store rules and, where required, consent mechanisms or OS settings (for example, tracking limits / ATT on iOS).",
+              ],
+            },
+            {
+              title: "8. Purpose and storage",
+              paragraphs: [
+                "Primary purpose: to let you organize and view your personal finances on the device.",
+                "Advertising purpose: to fund the free version of the App through ads shown in the interface.",
+                "Local storage: SQLite database (App file on the device) for financial data and technical preferences; system local storage (AsyncStorage) for theme and language.",
+                "CtGrana, in the current version, does not operate its own servers that receive, store, or process your financial transactions. Advertising data may be processed by Google (AdMob) off-device under Google’s policies.",
+              ],
+            },
+            {
+              title: "9. Sharing and third parties",
+              paragraphs: [
+                "CtGrana does not sell your financial data.",
+                "Advertising — Google AdMob: we use the react-native-google-mobile-ads / Google Mobile Ads SDK to show ads (for example, banners and interstitials). Google may receive technical data and advertising identifiers needed to operate the ad network. See also Google’s / AdMob Privacy Policy. CtGrana does not transmit your ledger (statement) to advertisers.",
+                "User-initiated sharing: if you use “share report” or a similar feature, the content you choose to send leaves the App through the system share sheet (apps and destinations you select).",
+                "Other caveats outside the App’s direct control: (i) operating-system backups (for example, iCloud or Google Backup) may copy App data to the manufacturer’s or store-account cloud; (ii) anyone with physical or unlocked access to the device may see data in the App; (iii) if an opt-in feature (such as cloud sync) is added later, the related sharing will be described in these Terms before it is enabled.",
+              ],
+            },
+            {
+              title: "10. Security",
+              paragraphs: [
+                "The App does not implement additional app-level encryption of the database (for example, a CtGrana-encrypted vault). Protection depends on the operating system and your device (screen lock, OS biometrics, manufacturer disk encryption when available).",
+                "We recommend keeping the device locked, not sharing unlock access with others, and reviewing system backup options if you do not want off-device copies of App data.",
+              ],
+            },
+            {
+              title: "11. Retention and deletion",
+              paragraphs: [
+                "Financial data and preferences remain on the device while the App is installed and you have not deleted them.",
+                "You can delete transactions, categories (when allowed), budgets, and recurrences through the App screens. Uninstalling the App generally removes local data stored by CtGrana on this device.",
+                "Because CtGrana does not keep a financial copy on its own servers, there is no “delete from CtGrana cloud” request for your ledger — deletion happens on the device (and, if applicable, in OS backups). Data processed by Google AdMob follows Google’s policies and retention periods.",
+              ],
+            },
+            {
+              title: "12. Data-subject rights (LGPD)",
+              paragraphs: [
+                "To the extent applicable, you may: access and correct data you entered in the App; delete data through the App or by uninstalling it; and obtain information about the processing described in these Terms.",
+                "Because financial processing is local, these rights over your ledger are exercised on the device in practice. For general questions: " +
+                  CONTACT +
+                  ". For ad-related and advertising-identifier options, also use your operating-system privacy settings and tools provided by Google.",
+              ],
+            },
+            {
+              title: "13. Children and teens",
+              paragraphs: [
+                "The App is not intended for children without a guardian’s supervision. If you are the legal guardian of a minor, you supervise use, any financial data that may be recorded, and exposure to ads.",
+              ],
+            },
+            {
+              title: "14. Changes to these Terms",
+              paragraphs: [
+                "We may update these Terms to reflect changes to the App, the law, or privacy practices. The current version will be available in the App (Settings) and, when published, on CtGrana’s external web page.",
+                "Continued use after changes are reasonably notified in-app or on the web page constitutes acceptance of the updated version, except where law requires additional consent.",
+              ],
+            },
+            {
+              title: "15. Limitation of liability",
+              paragraphs: [
+                "To the maximum extent permitted by applicable law, CtGrana is not liable for: data loss from uninstall, hardware failure, device reset, incomplete backups, or operating-system settings; financial decisions made based on the App; interruptions caused by OS updates or device limitations; or availability, content, or conduct of third-party ads served via AdMob.",
+                "The App is provided “as is”, within legal limits. Nothing in these Terms excludes consumer rights that cannot be waived by contract.",
+              ],
+            },
+            {
+              title: "16. Governing law",
+              paragraphs: [
+                "These Terms are governed by the laws of the Federative Republic of Brazil, including the LGPD, without prejudice to applicable consumer-protection rules. References to Brazilian law apply even when the interface is shown in English.",
+              ],
+            },
+            {
+              title: "17. Contact",
+              paragraphs: [
+                "Product operator (as identified in these Terms): CtGrana.",
+                "Privacy and terms: " + CONTACT + ".",
+              ],
+            },
+          ],
+        },
+      };
+
+      function slugify(title) {
+        return title
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/(^-|-$)/g, "");
+      }
+
+      function render(lang) {
+        const data = COPY[lang];
+        document.documentElement.lang = lang === "en" ? "en" : "pt-BR";
+        document.title =
+          lang === "en"
+            ? "CtGrana — Terms of Use and Privacy"
+            : "CtGrana — Termos de Uso e Privacidade";
+
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (data[key]) el.textContent = data[key];
+        });
+
+        const toc = document.getElementById("toc-list");
+        const content = document.getElementById("content");
+        toc.innerHTML = "";
+        content.innerHTML = "";
+
+        data.sections.forEach((section) => {
+          const id = slugify(section.title);
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = "#" + id;
+          a.textContent = section.title;
+          li.appendChild(a);
+          toc.appendChild(li);
+
+          const sec = document.createElement("section");
+          sec.id = id;
+          const h2 = document.createElement("h2");
+          h2.textContent = section.title;
+          sec.appendChild(h2);
+          section.paragraphs.forEach((text) => {
+            const p = document.createElement("p");
+            p.textContent = text;
+            sec.appendChild(p);
+          });
+          content.appendChild(sec);
+        });
+
+        document.getElementById("btn-pt").setAttribute("aria-pressed", String(lang === "pt-BR"));
+        document.getElementById("btn-en").setAttribute("aria-pressed", String(lang === "en"));
+      }
+
+      document.getElementById("btn-pt").addEventListener("click", () => render("pt-BR"));
+      document.getElementById("btn-en").addEventListener("click", () => render("en"));
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+      render("pt-BR");
+    </script>
+  </body>
+</html>
